@@ -10,7 +10,7 @@ const calendar = (month,changeDate) => {
 }
 
 const CalendarDay = (props) => (
-  <div style={{display:'inline'}}>
+  <div style={{display:'inline'}} >
     {calendar(props.month,props.changeDay)}
   </div>
 )

@@ -2,6 +2,7 @@ import React,{ Component } from 'react'
 import CalendarText from './CalendarText'
 import CalendarMonth from './CalendarMonth'
 import CalendarDay from './CalendarDay'
+import CalendarLeft from './CalendarLeft'
 
 class CalendarApp extends Component {
   constructor(props){
@@ -42,13 +43,19 @@ class CalendarApp extends Component {
     return(
       <div>
         <h1>{this.props.lebel}</h1>
-        <CalendarMonth 
+        <CalendarLeft 
+          month={this.state.month}
+          OnClickChangeMonth={this.changeMonth} 
+          OnClickChangeMonthBefore={this.changeMonthBefore}
+          changeDay={this.changeDate}
+        />
+        {/*<CalendarMonth 
           month={this.state.month}
           OnClickChangeMonth={this.changeMonth} 
           OnClickChangeMonthBefore={this.changeMonthBefore} 
-        />
+        />*/}
         <CalendarText dateText={this.state.date} dateMonth={this.state.month} />
-        <CalendarDay month={this.state.month} changeDay={this.changeDate} />
+        {/*<CalendarDay month={this.state.month} changeDay={this.changeDate} />*/}
       </div>
     )
   }
