@@ -1,19 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import Calendar from './components/CalendarApp'
+import CalendarApp from './components/CalendarApp'
+import Counter from './components/Counter'
 
-const render = (Calendar) => {
+const render = (CalendarApp) => (
   ReactDOM.render(
     <AppContainer>
-      <Calendar label="I'm a counter" />
+      <CalendarApp label="Calendar" />
     </AppContainer>,
-    document.getElementById('react-root'))
-}
+    document.getElementById('react-root')
+  )
+)
 
-render(Calendar)
+render(CalendarApp)
+
 if (module.hot) {
-  module.hot.accept('./components/Counter', () => {
-    render(Calendar)
+  module.hot.accept('./components/CalendarApp', () => {
+    render(CalendarApp)
   })
 }

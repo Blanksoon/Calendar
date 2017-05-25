@@ -14,6 +14,7 @@ export default class Counter extends Component {
       counter: this.state.counter + 1
     }) 
   }
+
   render() {
     return (
       <div className="counter">
