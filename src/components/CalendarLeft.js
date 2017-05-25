@@ -1,6 +1,7 @@
 import React from 'react'
 import CalendarMonth from './CalendarMonth'
 import CalendarDay from './CalendarDay'
+
 const CalendarLeft = (props) => (
   <div style={{float:'left', width:'30%'}}>
     <CalendarMonth 

@@ -49,13 +49,7 @@ class CalendarApp extends Component {
           OnClickChangeMonthBefore={this.changeMonthBefore}
           changeDay={this.changeDate}
         />
-        {/*<CalendarMonth 
-          month={this.state.month}
-          OnClickChangeMonth={this.changeMonth} 
-          OnClickChangeMonthBefore={this.changeMonthBefore} 
-        />*/}
         <CalendarText dateText={this.state.date} dateMonth={this.state.month} />
-        {/*<CalendarDay month={this.state.month} changeDay={this.changeDate} />*/}
       </div>
     )
   }
